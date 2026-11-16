@@ -1,7 +1,5 @@
 /* Identidade oficial e dados da empresa, preservando a estrutura do template. */
 .fb-brand-logo {
-  background: #182b54;
-  border-radius: 4px;
   object-fit: contain;
   height: auto;
   max-width: 100%;
