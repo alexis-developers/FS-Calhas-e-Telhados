@@ -1,23 +1,6 @@
 (function ($) {
     "use strict";
 
-    /* Remove labels accidentally left by the offline HTML mirror. */
-    function removeMirrorLabels() {
-        var labels = /^(Início|Fim|início|fim|Botão|Seção|Área|extremidade|Todos os arquivos|Rolar para cima|Barra lateral|modal|Pré-carregador|Seção do boletim|Início do|Fim do|Início da|Fim da)/i;
-        var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
-        var nodes = [];
-        while (walker.nextNode()) nodes.push(walker.currentNode);
-        nodes.forEach(function (node) {
-            var value = node.nodeValue.replace(/\s+/g, ' ').trim();
-            if (labels.test(value) || /HTTrack Website Copier|Espelhado de|Adicionado por HTTrack|\[se for IE 9\]/i.test(value)) {
-                node.parentNode.removeChild(node);
-            }
-        });
-    }
-    removeMirrorLabels();
-    window.addEventListener('load', removeMirrorLabels);
-    window.setTimeout(removeMirrorLabels, 300);
-
     /* Replace leftover template copy with the company's actual services. */
     function cleanTemplateCopy() {
         var templateCopy = /lorem ipsum|melhorar a presença online|existem muitas variações|distraído pelo conteúdo legível|conteúdo aqui|fictício padrão da indústria|your name|your email|your phone|your website|email here|message here/i;
