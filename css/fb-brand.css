@@ -1,0 +1,16 @@
+/* Identidade oficial e dados da empresa, preservando a estrutura do template. */
+.fb-brand-logo {
+  background: #182b54;
+  border-radius: 4px;
+  object-fit: contain;
+  height: auto;
+  max-width: 100%;
+}
+.fb-company-details {
+  color: #fff;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  overflow-wrap: anywhere;
+}
+.fb-company-details p { color: inherit; margin: 0 0 12px; font-size: 14px; line-height: 1.6; }
+.fb-company-details a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
